@@ -4,7 +4,7 @@ Kenzie assignment: String2
 """
 # Your name, plus anyone who helped you with this assignment.
 # Give credit where credit is due.
-__author__ = "???"
+__author__ = "Gabrielle, stackoverflow"
 
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
@@ -41,11 +41,13 @@ def verbing(s):
 
 
 def not_bad(s):
-    nots = s.find('not')
-    bads = s.find('bad')
-    if bads > nots:
-        return s.replace(s[nots:bads + 3], 'good')
-    return s
+    new_string = s
+    not_index = s.find("not")
+    bad_index = s.find("bad")
+    if not_index >= 0 and bad_index >= 0 and bad_index > not_index:
+        new_string = s[0:not_index] + "good" + \
+            s[(bad_index + 3):]
+    return new_string
 
 
 # F. front_back
