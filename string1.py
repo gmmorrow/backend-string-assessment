@@ -75,14 +75,10 @@ def fix_start(s):
 # Assume a and b are length 2 or more.
 
 
-def mix_up(a, b):
-    return (
-        (
-            a.replace(a[:2], b[:2])
-            + " "
-            + b.replace(b[:2], a[:2])
-        )
-    )
+def mix_up(a, b): 
+    mix_a = b[:2] + a[2:]
+    mix_b = a[:2] + b[2:]
+    return mix_a + ' ' + mix_b
 
 
 
